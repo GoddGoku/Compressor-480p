@@ -24,27 +24,27 @@
     },
     "TG_BOT_TOKEN": {
       "description": "Your bot token, as a string. Get this from @BotFather",
-      "value": "",
+      "value": "7030763005:AAFHD7tMOCZzahFg3fWNCjsnGw8_CeO1uQc",
       "required": true
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "26376042",
+      "value": "19863702",
       "required": true
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "1f5343b0646645ca1eaf7c4759fc248f",
+      "value": "6d48cb362a97a43cfc944fd5c0f917f9",
       "required": true
     },
     "BOT_USERNAME": {
       "description": "Your Bot Username. Without `@` before Username!",
-      "value": "",
+      "value": "Fair480_bot",
       "required": true
     },
     "LOG_CHANNEL": {
       "description": "Your Bot's Log Channel's Username. For Help ask in @linux_repo",
-      "value": "ABotLogs",
+      "value": "@Fhiooursdnkoysdvnko",
       "required": true
     },
     "AUTH_USERS": {
