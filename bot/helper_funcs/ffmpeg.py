@@ -80,13 +80,13 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     ##  -metadata title='DarkEncodes [Join t.me/AnimesInLowSize]' -vf drawtext=fontfile=Italic.ttf:fontsize=20:fontcolor=black:x=15:y=15:text='Dark Encodes'
     ##"-metadata", "title=@SenpaiAF", "-vf", "drawtext=fontfile=njnaruto.ttf:fontsize=20:fontcolor=black:x=15:y=15:text=" "Dark Encodes",
      ## -vf eq=gamma=1.4:saturation=1.4
-     ## lol 😂
+     ## lol ðŸ˜‚
     crf.append("23")
     codec.append("libx264")
     resolution.append("1920x1080")
     preset.append("veryfast")
     audio_b.append("40k")
-    file_genertor_command = f"ffmpeg -hide_banner -loglevel quiet -progress '{progress}' -i '{video_file}' -metadata 'title=Encoded by Anime Fair' -c:v {codec[0]}  -map 0 -crf {crf[0]} -c:s copy -pix_fmt yuv420p -s {resolution[0]} -b:v 150k -c:a libopus -b:a {audio_b[0]} -preset {preset[0]} -metadata:s:v 'title=Anime Sensei' -metadata:s:a 'title=Anime Fair' -metadata:s:s 'title=Anime Fair' '{out_put_file_name}' -y"
+    file_genertor_command = f"ffmpeg -hide_banner -loglevel quiet -progress '{progress}' -i '{video_file}' -metadata 'title=Encoded by @Anime_Fair' -c:v {codec[0]}  -map 0 -crf {crf[0]} -c:s copy -pix_fmt yuv420p -s {resolution[0]} -b:v 150k -c:a libopus -b:a {audio_b[0]} -preset {preset[0]} -metadata:s:a 'title=Anime Fair' -metadata:s:s 'title=Anime Fair' '{out_put_file_name}' -y"
  #Done !!
     COMPRESSION_START_TIME = time.time()
     process = await asyncio.create_subprocess_shell(
@@ -95,8 +95,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
            stdout=asyncio.subprocess.PIPE,
            stderr=asyncio.subprocess.PIPE,
           )
-    #stdout, stderr = await process.communicate()
-    
+    #stdout, stderr = await process.communicate()         
     LOGGER.info("ffmpeg_process: "+str(process.pid))
     pid_list.insert(0, process.pid)
     status = output_directory + "/status.json"
@@ -140,13 +139,13 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
         if difference > 0:
           ETA = TimeFormatter(difference*1000)
         percentage = math.floor(elapsed_time * 100 / total_time)
-        progress_str = "♻️<b>ᴘʀᴏɢʀᴇss:</b> {0}%\n[{1}{2}]".format(
+        progress_str = "â™»ï¸<b>á´˜Ê€á´É¢Ê€á´‡ss:</b> {0}%\n[{1}{2}]".format(
             round(percentage, 2),
             ''.join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 10))]),
             ''.join([UN_FINISHED_PROGRESS_STR for i in range(10 - math.floor(percentage / 10))])
             )
-        stats = f'⚡ <b>ᴇɴᴄᴏᴅɪɴɢ ɪɴ ᴘʀᴏɢʀᴇss</b>\n\n' \
-                f'🕛 <b>ᴛɪᴍᴇ ʟᴇғᴛ:</b> {ETA}\n\n' \
+        stats = f'âš¡ <b>á´‡É´á´„á´á´…ÉªÉ´É¢ ÉªÉ´ á´˜Ê€á´É¢Ê€á´‡ss</b>\n\n' \
+                f'ðŸ•› <b>á´›Éªá´á´‡ ÊŸá´‡Ò“á´›:</b> {ETA}\n\n' \
                 f'{progress_str}\n'
         try:
           await message.edit_text(
@@ -154,7 +153,7 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
             reply_markup=InlineKeyboardMarkup(
                 [
                     [ 
-                        InlineKeyboardButton('❌ Cancel ❌', callback_data='fuckingdo') # Nice Call 🤭
+                        InlineKeyboardButton('âŒ Cancel âŒ', callback_data='fuckingdo') # Nice Call ðŸ¤­
                     ]
                 ]
             )
