@@ -44,7 +44,7 @@
     },
     "LOG_CHANNEL": {
       "description": "Your Bot's Log Channel's Username. For Help ask in @linux_repo",
-      "value": "@Fhiooursdnkoysdvnko",
+      "value": "Fhiooursdnkoysdvnko",
       "required": true
     },
     "AUTH_USERS": {
